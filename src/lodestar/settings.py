@@ -35,7 +35,6 @@ DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    "lodestar-project-439dd73a5112.herokuapp.com",
     ".up.railway.app",
 ]
 
@@ -47,7 +46,7 @@ if RAILWAY_PUBLIC_DOMAIN:
 # CSRF (Cross-Site Request Forgery) protection - prevents malicious sites from
 # making unauthorized requests on behalf of your users
 # CSRF_TRUSTED_ORIGINS lists specific domains allowed to send forms/API requests
-CSRF_TRUSTED_ORIGINS = ["https://*.herokuapp.com", "https://*.up.railway.app"]
+CSRF_TRUSTED_ORIGINS = ["https://*.up.railway.app"]
 if RAILWAY_PUBLIC_DOMAIN:
     CSRF_TRUSTED_ORIGINS.append(f"https://{RAILWAY_PUBLIC_DOMAIN}")
 
