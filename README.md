@@ -491,7 +491,7 @@ The application is deployed on Railway with the following configuration:
 - **Database:** PostgreSQL (Railway Postgres service, linked via `DATABASE_URL`)
 - **File Storage:** Cloudinary for image uploads
 - **Environment Variables:** Configured in the Railway service's Variables tab
-- **Release Steps:** The `Procfile` runs migrations and `collectstatic` before starting Gunicorn
+- **Startup Command:** The `Procfile` `web` command runs `migrate` and `collectstatic` before starting Gunicorn on every container start (each deploy and restart), not as a one-time release phase; `migrate` only applies pending migrations, and `collectstatic` rebuilds the static files inside each fresh container
 
 Ensure all environment variables are properly configured in your hosting environment (e.g., Railway Variables).
 
