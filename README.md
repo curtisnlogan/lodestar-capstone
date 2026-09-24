@@ -15,7 +15,7 @@ This project demonstrates mastery of all required competencies:
 - ✅ **API Integration**: Live data from professional astronomical databases
 - ✅ **Responsive Design**: Mobile-first approach optimized for field use
 - ✅ **Testing & Validation**: Comprehensive manual testing with W3C validation
-- ✅ **Deployment**: Live application hosted on Heroku with PostgreSQL
+- ✅ **Deployment**: Live application hosted on Railway with PostgreSQL
 - ✅ **Documentation**: Professional README with setup instructions
 - ✅ **Version Control**: Structured Git workflow with meaningful commits
 
@@ -31,7 +31,7 @@ This project demonstrates mastery of all required competencies:
 
 ## Features
 
-🚀 **[Live Application](https://lodestar-project-439dd73a5112.herokuapp.com/)** | **[GitHub Repository](https://github.com/curtisnlogan/lodestar-project)**
+🚀 **[Live Application](https://web-production-40f35.up.railway.app/)** | **[GitHub Repository](https://github.com/curtisnlogan/lodestar-capstone)**
 
 ### Project Overview
 
@@ -50,7 +50,7 @@ _Screenshots and detailed feature demonstrations are available in the deployed a
 
 **Try the Live Application:**
 
-1. Visit [Lodestar App](https://lodestar-project-439dd73a5112.herokuapp.com/)
+1. Visit [Lodestar App](https://web-production-40f35.up.railway.app/)
 2. Click "Sign In" → "Create an Account Here"
 3. Create a test account (use any email format)
 4. Explore: Create observing session → Add observations → View enhanced data
@@ -138,7 +138,7 @@ _Production-ready with live astronomical API integration and comprehensive data 
 ## Tech Stack
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=html,css,js,django,tailwind,postgres,heroku&perline=7" alt="HTML, CSS, JavaScript, Django, Tailwind CSS, PostgreSQL, Heroku" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,django,tailwind,postgres&perline=6" alt="HTML, CSS, JavaScript, Django, Tailwind CSS, PostgreSQL" />
 </p>
 
 **Key Dependencies:**
@@ -481,18 +481,19 @@ python src/manage.py runserver
 
 #### Production Deployment
 
-**🌐 Live Application:** [https://lodestar-project-439dd73a5112.herokuapp.com/](https://lodestar-project-439dd73a5112.herokuapp.com/)
+**🌐 Live Application:** [https://web-production-40f35.up.railway.app/](https://web-production-40f35.up.railway.app/)
 
 **✅ DEPLOYMENT STATUS: LIVE AND FULLY FUNCTIONAL**
 
-The application is deployed on Heroku with the following configuration:
+The application is deployed on Railway with the following configuration:
 
-- **Platform:** Heroku
-- **Database:** PostgreSQL (Heroku Postgres add-on)
+- **Platform:** Railway, auto-deploying from the `main` branch
+- **Database:** PostgreSQL (Railway Postgres service, linked via `DATABASE_URL`)
 - **File Storage:** Cloudinary for image uploads
-- **Environment Variables:** Configured in Heroku Config Vars
+- **Environment Variables:** Configured in the Railway service's Variables tab
+- **Release Steps:** The `Procfile` runs migrations and `collectstatic` before starting Gunicorn
 
-Ensure all environment variables are properly configured in your hosting environment (e.g., Heroku Config Vars).
+Ensure all environment variables are properly configured in your hosting environment (e.g., Railway Variables).
 
 ## Management Commands
 
@@ -632,7 +633,7 @@ _The Lighthouse audit demonstrates the application's commitment to web standards
 
 ### CSS Validation Results
 
-The application's CSS has been validated using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flodestar-project-439dd73a5112.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en):
+The application's CSS has been validated using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fweb-production-40f35.up.railway.app%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en):
 
 **✅ Validation Status: Clean**
 
@@ -656,7 +657,7 @@ _All flagged items are legitimate modern CSS features or intentional compatibili
 
 ### HTML Validation Results
 
-The application's HTML has been validated using the [W3C Nu HTML Checker](https://validator.w3.org/nu/?doc=https%3A%2F%2Flodestar-project-439dd73a5112.herokuapp.com%2F):
+The application's HTML has been validated using the [W3C Nu HTML Checker](https://validator.w3.org/nu/?doc=https%3A%2F%2Fweb-production-40f35.up.railway.app%2F):
 
 **✅ Validation Status: No Errors**
 
